@@ -21,7 +21,7 @@ function card({data}) {
                     <li className={data.isReport ? "" : "text-muted"}><span className="fa-li"><i className={data.isReport ?"fas fa-check":"fas fa-times"}></i></span>{data.report}</li>
                     </ul>
                     <div className="d-grid">
-                        <a href="javascript(void)" className="btn btn-primary text-uppercase">Button</a>
+                        <button className="btn btn-primary text-uppercase">Button</button>
                     </div>
                 </div>
             </div>
