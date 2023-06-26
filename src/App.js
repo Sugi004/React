@@ -48,8 +48,8 @@ function App() {
         <div id="content-wrapper" className="d-flex flex-column">
             <div id="content">
                 <div className="container-fluid">
+                <DashBoard users={users} setUsers={setUsers}/>
                 <Routes>
-                    <Route path="/dashboard" element={<DashBoard users={users} setUsers={setUsers}/>}></Route>
                     <Route path="/add-user" element={<AddUser users={users} setUsers={setUsers}/>}></Route>
                     <Route path="/edit-user/:id" element={<EditUser users={users} setUsers={setUsers}/>}></Route>
                 </Routes>
