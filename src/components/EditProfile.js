@@ -59,22 +59,21 @@ function EditProfile({users,setUsers}) {
   <Form>
       <Form.Group className="mb-3" controlId="formBasicName">
         <Form.Label style={{fontSize:"20px", fontWeight:"600"}}>Name</Form.Label>
-        <Form.Control defaultValue={users[params.id].name} style={{fontSize:"20px", fontFamily:"verdana"}} onChange={(e)=>{setName(e.target.value)}}/>
+        <Form.Control defaultValue={users[params.id].name}  onChange={(e)=>{setName(e.target.value)}}/>
       </Form.Group>
-
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label style={{fontSize:"20px", fontWeight:"600"}}>Email ID</Form.Label>
-        <Form.Control defaultValue={users[params.id].email} style={{fontSize:"20px", fontFamily:"verdana"}} onChange={(e)=>{setEmail(e.target.value)}}/>
+        <Form.Control defaultValue={users[params.id].email}  onChange={(e)=>{setEmail(e.target.value)}}/>
       </Form.Group>
 
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label style={{fontSize:"20px", fontWeight:"600"}}>Mobile</Form.Label>
-        <Form.Control defaultValue={users[params.id].mobile} type="number" style={{fontSize:"20px", fontFamily:"verdana"}} onChange={(e)=>{setMobile(e.target.value)}}/>
+        <Form.Control defaultValue={users[params.id].mobile} type="number"  onChange={(e)=>{setMobile(e.target.value)}}/>
       </Form.Group>
       
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label style={{fontSize:"20px", fontWeight:"600"}}>Address</Form.Label>
-        <Form.Control defaultValue={users[params.id].address} style={{fontSize:"20px", fontFamily:"verdana"}} onChange={(e)=>{setAdress(e.target.value)}}/>
+        <Form.Control defaultValue={users[params.id].address}  onChange={(e)=>{setAdress(e.target.value)}}/>
       </Form.Group>
 
       <Form.Group className="mb-3" controlId="formBasicPassword">
