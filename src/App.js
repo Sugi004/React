@@ -1,10 +1,16 @@
 import { useState } from "react";
 import AddUser from "./components/AddUser";
-import DashBoard from "./components/DashBoard";
+import ListUsers from "./components/ListUsers";
 import SideBar from "./components/SideBar";
-
+import Profile from "./components/Profile";
+import user1 from '../src/images/user1.jpg'
+import user2 from '../src/images/user2.jpeg'
+import user3 from '../src/images/user3.jpg'
+import user4 from '../src/images/user4.jpeg'
+import user5 from '../src/images/user5.webp'
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import EditUser from "./components/EditUser";
+import EditProfile from "./components/EditProfile";
 
 function App() {
 
@@ -12,32 +18,42 @@ function App() {
         {
             name:"Sugi",
             email:"sugi@gmail.com",
-            mobile:"9788370456",
+            mobile:"9788354547",
             address:"17/c5, Bharathi Nagar, Tamil nadu",
+            img: user1,
+            password:"Giosn@1234"
         },
         {
             name:"Aswin",
             email:"aswin@gmail.com",
-            mobile:"7695992861",
+            mobile:"7692154512",
             address:"18/22, Jeevanantham Nagar, Tamil nadu",
+            img: user2,
+            password:"Fioasn@4566"
         },
         {
             name:"Vignesh",
             email:"vicky@gmail.com",
-            mobile:"812345673",
+            mobile:"8123456737",
             address:"Francis street, Sweden",
+            img: user3,
+            password:"Fioasn@4566"
         },
         {
             name:"Siva",
             email:"siva@hotmail.com",
-            mobile:"8608768971",
+            mobile:"8602411315",
             address:"32, Ramasamy Nagar, Tamil nadu",
+            img: user4,
+            password:"Hianty@0987"
         },
         {
             name:"James",
             email:"james@gmail.com",
             mobile:"+123 454789",
             address:"Church Street, France",
+            img: user5,
+            password:"Kinfro@8756"
         },
     ])
     
@@ -49,9 +65,11 @@ function App() {
             <div id="content">
                 <div className="container-fluid">
                 <Routes>
-                    <Route path="/dashboard" element={<DashBoard users={users} setUsers={setUsers}/>}></Route>
+                    <Route path="/users" element={<ListUsers users={users} setUsers={setUsers}/>}></Route>
                     <Route path="/add-user" element={<AddUser users={users} setUsers={setUsers}/>}></Route>
                     <Route path="/edit-user/:id" element={<EditUser users={users} setUsers={setUsers}/>}></Route>
+                    <Route path="/profile/:id" element={<Profile users={users} setUsers={setUsers}/>}></Route>
+                    <Route path="/edit-profile/:id" element={<EditProfile users={users} setUsers={setUsers}/>}></Route>
                 </Routes>
             </div>
         </div>

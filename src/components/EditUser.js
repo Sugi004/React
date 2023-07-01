@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState , useEffect } from 'react'
 import  Form  from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/esm/Button'
 import { useNavigate, useParams } from 'react-router-dom'
@@ -9,12 +9,24 @@ import { useNavigate, useParams } from 'react-router-dom'
 function EditUser({users, setUsers}) {
     let params = useParams()
 
-    let [name,setName] = useState(users[params.id].name)
-    let [email,setEmail] = useState(users[params.id].email)
-    let [mobile,setMobile] = useState(users[params.id].mobile)
-    let [address,setAdress] = useState(users[params.id].address)
+    let [name,setName] = useState()
+    let [email,setEmail] = useState()
+    let [mobile,setMobile] = useState()
+    let [address,setAdress] = useState()
     let navigate = useNavigate()
     
+    useEffect(()=>{
+      if(params.id<users.length){
+        setName(users[params.id].name)
+        setEmail(users[params.id].email)
+        setMobile(users[params.id].mobile)
+        setAdress(users[params.id].address)
+      }
+      else{
+        alert("Invalid User ID")
+        navigate('/users')
+      }
+    },[])
 
     let handleSave = ()=>{
      let newUsers = [...users]
@@ -25,8 +37,10 @@ function EditUser({users, setUsers}) {
         address
      })
      setUsers(newUsers)
-     navigate('/dashboard')
+     navigate('/users')
     }
+
+    
   
     return <div className='container'>
       <div className="d-sm-flex align-items-center justify-content-between mb-4">

@@ -1,8 +1,6 @@
-
 import Table from 'react-bootstrap/Table';
-import Button from 'react-bootstrap/Button';
 import { useNavigate } from 'react-router-dom';
-function DashBoard({users,setUsers}) {
+function ListUsers({users,setUsers}) {
   let navigate = useNavigate()
    
 
@@ -14,7 +12,7 @@ function DashBoard({users,setUsers}) {
   return <>
 
     <div className="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 className="h3 mb-0 text-gray-800" style={{marginTop:"10px"}}>Dashboard</h1>
+        <h1 className="h3 mb-0 text-gray-800" style={{marginTop:"10px"}}>Users</h1>
     </div>
       
     <div className='container'>
@@ -39,9 +37,13 @@ function DashBoard({users,setUsers}) {
                       <td>{e.mobile} </td>
                       <td>{e.address} </td>
                       <td>
-                            <Button variant='primary'onClick={()=>{navigate(`/edit-user/${i}`)}} >Edit</Button>
-                            &nbsp;
-                            <Button variant='danger' onClick= {()=>handleDelete(i)}>Delete</Button>  
+                            
+                            <i class="fa-solid fa-pen-to-square" style={{color: "#17416d", cursor:"pointer"}} onClick={()=>{navigate(`/edit-user/${i}`)}}></i>
+                            &nbsp; &nbsp;
+                           
+                            <i class="fa-solid fa-trash" style={{color: "#17416d", cursor:"pointer"}} onClick= {()=>handleDelete(i)}></i>
+                            &nbsp; &nbsp;
+                            <i class="fa-solid fa-id-card" style={{color: "#17416d", cursor:"pointer"}} onClick={()=>{navigate(`/profile/${i}`)}}></i>
                       </td>
                   </tr>
               })
@@ -53,5 +55,5 @@ function DashBoard({users,setUsers}) {
   
 }
 
-export default DashBoard
+export default ListUsers
 

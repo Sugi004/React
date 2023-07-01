@@ -19,7 +19,7 @@ function AddUser({users, setUsers}) {
       address
    })
    setUsers(newUsers)
-   navigate('/dashboard')
+   navigate('/users')
   }
 
   return <div className='container'>

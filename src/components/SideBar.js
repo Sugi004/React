@@ -14,34 +14,20 @@ function SideBar() {
             <div className="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
         </a>
 
-        <hr className="sidebar-divider my-0"/>
+ 
 
         <li className="nav-item active">
-            <Link to='/dashboard' className="nav-link">
-                <i className="fas fa-fw fa-tachometer-alt"></i>
-                <span>Dashboard</span>
+            <Link to='/users' className="nav-link">
+                <i class="fa-solid fa-users"></i>
+                <span> List Users</span>
             </Link>
         </li>
-
-            <hr className="sidebar-divider"/>
-
-            <div className="sidebar-heading">
-                Interface
-            </div>
-
-                <li className="nav-item">
-                    <Link to='/add-user' className="nav-link collapsed">
-                        <i className="fas fa-user fa-solid"></i>
-                        <span>Create User</span>
-                    </Link>
-                    <div id="collapseTwo" className="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                        <div className="bg-white py-2 collapse-inner rounded">
-                            <h6 className="collapse-header">Custom Components:</h6>
-                            <a className="collapse-item" href="javascript(void)javascript(void)">Buttons</a>
-                            <a className="collapse-item" href="javascript(void)">Cards</a>
-                        </div>
-                    </div>
-                </li>
+        <li className="nav-item active">
+            <Link to='/add-user' className="nav-link collapsed">
+                <i class="fa-solid fa-user-plus"></i>
+                <span> Create User</span>
+            </Link>
+        </li>
     </ul>
   </>
 }
