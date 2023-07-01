@@ -19,22 +19,22 @@ function Profile({users, setUsers}) {
     <Form>
       <Form.Group className="mb-3" controlId="formBasicName">
         <Form.Label style={{fontSize:"20px", fontWeight:"600"}}>Name</Form.Label>
-        <Form.Control  disabled readOnly defaultValue={users[params.id].name} style={{fontSize:"20px", fontFamily:"verdana"}} />
+        <Form.Control  disabled readOnly defaultValue={users[params.id].name}  />
       </Form.Group>
 
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label style={{fontSize:"20px", fontWeight:"600"}}>Email ID</Form.Label>
-        <Form.Control disabled readOnly defaultValue={users[params.id].email} style={{fontSize:"20px", fontFamily:"verdana"}}/>
+        <Form.Control disabled readOnly defaultValue={users[params.id].email} />
       </Form.Group>
 
       <Form.Group className="mb-3" controlId="formBasicPassword">
         <Form.Label style={{fontSize:"20px", fontWeight:"600"}}>Mobile</Form.Label>
-        <Form.Control readOnly disabled defaultValue={users[params.id].mobile} style={{fontSize:"20px", fontFamily:"verdana"}}/>
+        <Form.Control readOnly disabled defaultValue={users[params.id].mobile}/>
       </Form.Group>
 
       <Form.Group className="mb-3" controlId="formBasicPassword">
         <Form.Label style={{fontSize:"20px", fontWeight:"600"}}>Address</Form.Label>
-        <Form.Control readOnly disabled defaultValue={users[params.id].address} style={{fontSize:"20px", fontFamily:"verdana"}}/>
+        <Form.Control readOnly disabled defaultValue={users[params.id].address} />
       </Form.Group>
 
       <Form.Group className="mb-3" controlId="formBasicPassword">
